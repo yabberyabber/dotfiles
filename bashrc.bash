@@ -1,0 +1,10 @@
+alias unix1='ssh -i ~/.ssh/466key.pem anelso32@unix1.csc.calpoly.edu'
+alias unix2='ssh -i ~/.ssh/466key.pem anelso32@unix2.csc.calpoly.edu'
+alias unix3='ssh -i ~/.ssh/466key.pem anelso32@unix3.csc.calpoly.edu'
+alias unix4='ssh -i ~/.ssh/466key.pem anelso32@unix4.csc.calpoly.edu'
+alias unix11='ssh -i ~/.ssh/466key.pem anelso32@unix11.csc.calpoly.edu'
+alias unix12='ssh -i ~/.ssh/466key.pem anelso32@unix12.csc.calpoly.edu'
+alias unix13='ssh -i ~/.ssh/466key.pem anelso32@unix13.csc.calpoly.edu'
+alias unix14='ssh -i ~/.ssh/466key.pem anelso32@unix14.csc.calpoly.edu'
+alias vogon='ssh -i ~/.ssh/466key.pem anelso32@vogon.csc.calpoly.edu'
+alias foaad="unix13 -t 'ssh -i ~/.ssh/466key.pem nelson466@frank.ored.calpoly.edu'"
