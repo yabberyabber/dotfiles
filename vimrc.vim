@@ -14,8 +14,11 @@ set mouse=a
 
 set background=dark
 set cursorline
-colorscheme evening
 set number
+colorscheme evening
+if &diff
+    colorscheme pablo
+end
 
 set wildignore=*.o,*.pyc,*~,.swp*
 
@@ -28,3 +31,5 @@ autocmd FileType python           let b:comment_leader = '#'
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader, '\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader, '\/')<CR>//e<CR>:nohlsearch<CR>
 
+":json runs :%!python -m json.tool
+command Json :%!python -m json.tool
