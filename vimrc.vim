@@ -23,9 +23,9 @@ end
 set wildignore=*.o,*.pyc,*~,.swp*
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
-autocmd FileType c,cpp,h,hpp,java,scala set expandtab shiftwidth=4
+autocmd FileType c,cpp,h,hpp,java,scala set expandtab shiftwidth=4 tabstop=4 
 
-autocmd FileType c,cpp,h,hpp,java,scala let b:comment_leader = '//'
+autocmd FileType c,cpp,h,hpp,java,scala,js let b:comment_leader = '//'
 autocmd FileType python           let b:comment_leader = '#'
 
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader, '\/')<CR>/<CR>:nohlsearch<CR>

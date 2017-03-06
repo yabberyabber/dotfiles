@@ -17,7 +17,7 @@ vim-pathogen: ~/.vim/autoload/pathogen.vim
 	echo "execute pathogen#infect()" >> ~/.vimrc
 
 bash:
-	echo "source $(HERE)/bash.vim" >> ~/.bashrc
+	echo "source $(HERE)/bashrc.bash" >> ~/.bashrc
 
 tmux:
 	echo "source-file $(HERE)/tmuxrc.tmux">> ~/.tmux.conf
