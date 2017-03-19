@@ -9,6 +9,7 @@ vim: vim-pathogen
 	echo "source $(HERE)/vimrc.vim" >> ~/.vimrc
 	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 	echo "source $(HERE)/vimrc-nerdtree.vim" >> ~/.vimrc
+	git clone https://github.com/christoomey/vim-tmux-navigator ~/.vim/bundle/vim-tmux-navigator
 
 vim-pathogen: ~/.vim/autoload/pathogen.vim
 
