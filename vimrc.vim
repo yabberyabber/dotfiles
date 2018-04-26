@@ -27,6 +27,9 @@ autocmd FileType c,cpp,h,hpp,java,scala set expandtab shiftwidth=4 tabstop=4
 
 autocmd FileType c,cpp,h,hpp,java,scala,js let b:comment_leader = '//'
 autocmd FileType python           let b:comment_leader = '#'
+autocmd FileType tex let b:comment_leader = '%'
+autocmd FileType tex let g:tex_flavor='latex'
+autocmd FileType tex set spell
 
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader, '\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader, '\/')<CR>//e<CR>:nohlsearch<CR>
