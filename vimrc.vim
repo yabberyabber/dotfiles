@@ -47,3 +47,4 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 set hlsearch
 
+noremap <F12> <Esc>:syntax sync fromstart<CR>

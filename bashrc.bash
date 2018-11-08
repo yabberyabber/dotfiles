@@ -10,6 +10,8 @@ alias vogon='ssh anelso32@vogon.csc.calpoly.edu'
 alias foaad="unix13 -t 'ssh nelson466@frank.ored.calpoly.edu'"
 alias dekhtyar="unix13 -t 'ssh anelso32@cslvm57.csc.calpoly.edu'"
 
+export PATH=$HOME/bin:$PATH
+
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }

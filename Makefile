@@ -19,8 +19,7 @@ vim-pathogen: ~/.vim/autoload/pathogen.vim
 
 bash:
 	echo "source $(HERE)/bashrc.bash" >> ~/.bashrc
+	echo "source $(HERE)/git-completion.bash" >> ~/.bashrc
 
 tmux:
 	echo "source-file $(HERE)/tmuxrc.tmux">> ~/.tmux.conf
-
-
