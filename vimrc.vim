@@ -22,10 +22,11 @@ end
 
 set wildignore=*.o,*.pyc,*~,.swp*
 
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
-autocmd FileType c,cpp,h,hpp,java,scala set expandtab shiftwidth=4 tabstop=4 
+autocmd FileType make,go set noexpandtab shiftwidth=4 softtabstop=0
+autocmd FileType c,cpp,h,hpp,java,scala set expandtab shiftwidth=4 tabstop=4
+autocmd FileType python set expandtab shiftwidth=3 tabstop=3
 
-autocmd FileType c,cpp,h,hpp,java,scala,js let b:comment_leader = '//'
+autocmd FileType c,cpp,h,hpp,java,scala,js,go let b:comment_leader = '//'
 autocmd FileType python           let b:comment_leader = '#'
 autocmd FileType tex let b:comment_leader = '%'
 autocmd FileType tex let g:tex_flavor='latex'
@@ -48,3 +49,6 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 set hlsearch
 
 noremap <F12> <Esc>:syntax sync fromstart<CR>
+
+"When saving golang files, run gofmt
+au BufWritePost *.go !gofmt -w %
