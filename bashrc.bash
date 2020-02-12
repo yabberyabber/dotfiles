@@ -1,14 +1,4 @@
-alias unix1='ssh anelso32@unix1.csc.calpoly.edu'
-alias unix2='ssh anelso32@unix2.csc.calpoly.edu'
-alias unix3='ssh anelso32@unix3.csc.calpoly.edu'
-alias unix4='ssh anelso32@unix4.csc.calpoly.edu'
-alias unix11='ssh anelso32@unix11.csc.calpoly.edu'
-alias unix12='ssh anelso32@unix12.csc.calpoly.edu'
-alias unix13='ssh anelso32@unix13.csc.calpoly.edu'
-alias unix14='ssh anelso32@unix14.csc.calpoly.edu'
-alias vogon='ssh anelso32@vogon.csc.calpoly.edu'
-alias foaad="unix13 -t 'ssh nelson466@frank.ored.calpoly.edu'"
-alias dekhtyar="unix13 -t 'ssh anelso32@cslvm57.csc.calpoly.edu'"
+set -o vi
 
 export PATH=$HOME/bin:$PATH
 
