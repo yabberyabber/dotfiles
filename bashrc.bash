@@ -18,8 +18,22 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch)\n> '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w $(parse_git_branch)\n> '
-fi
+set_prompt () 
+{
+    local EXIT_CODE="$?"
+
+    BRANCH=$(parse_git_branch);
+    if [[ -n $BRANCH ]]; then
+        BRANCH_TEXT=$(echo -en "\033[01;93m${BRANCH}\033[00m\]");
+    else
+        BRANCH_TEXT="";
+    fi;
+
+    if [[ "$color_prompt" == yes ]]; then
+        PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] ${BRANCH_TEXT} \n ${EXIT_CODE} > "
+    else
+        PS1="\u@\h:\w $(parse_git_branch)\n ${EXIT_CODE} > "
+    fi
+}
+
+PROMPT_COMMAND=set_prompt
