@@ -12,10 +12,12 @@ set incsearch
 set wildmenu
 set mouse=a
 
-set background=dark
+set background=light
 set cursorline
 set number
-colorscheme evening
+set t_Co=256
+set t_ut=""
+colorscheme solarized
 if &diff
     colorscheme pablo
 end

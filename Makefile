@@ -11,6 +11,9 @@ vim: vim-pathogen
 	echo "source $(HERE)/vimrc-nerdtree.vim" >> ~/.vimrc
 	git clone https://github.com/christoomey/vim-tmux-navigator ~/.vim/bundle/vim-tmux-navigator
 
+	git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-tmux-navigator
+
+
 vim-pathogen: ~/.vim/autoload/pathogen.vim
 
 ~/.vim/autoload/pathogen.vim:
